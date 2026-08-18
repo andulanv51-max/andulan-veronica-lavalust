@@ -161,8 +161,8 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
         <div class="logo">Veron's Student Hub</div>
 
         <div>
-            <a href="/LavaLust/LavaLust/student">Home</a>
-            <a href="/LavaLust/LavaLust/student/profile">Profile</a>
+            <a href="/student">Home</a>
+            <a href="/student/profile">Profile</a>
         </div>
     </nav>
 
@@ -217,7 +217,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             </p>
         </div>
 
-        <a class="back-button" href="/LavaLust/Lavalust/student">
+        <a class="back-button" href="/student">
             Back to Home
         </a>
 
