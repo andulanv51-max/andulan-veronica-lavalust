@@ -142,8 +142,8 @@
         <div class="logo">Veron's Student Hub</div>
 
         <div>
-            <a href="/LavaLust/LavaLust/student">Home</a>
-            <a href="/LavaLust/LavaLust/student/profile">Profile</a>
+            <a href="/student">Home</a>
+            <a href="/student/profile">Profile</a>
         </div>
     </nav>
 
