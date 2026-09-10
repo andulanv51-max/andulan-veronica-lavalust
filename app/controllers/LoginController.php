@@ -20,7 +20,7 @@ class LoginController extends Controller
                     'logged_in' => true
                 ]);
 
-                header('Location: /LavaLust/LavaLust/products');
+                header('Location: ' . site_url('products'));
                 exit;
             }
 
@@ -40,7 +40,7 @@ class LoginController extends Controller
             'logged_in'
         ]);
 
-        header('Location: /LavaLust/LavaLust/login');
+        header('Location: ' . site_url('login'));
         exit;
     }
 }

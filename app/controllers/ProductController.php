@@ -27,7 +27,7 @@ class ProductController extends Controller
             $this->call->model('ProductModel');
             $this->ProductModel->insert($data);
 
-            header('Location: /LavaLust/LavaLust/products');
+            header('Location: ' . site_url('products'));
             exit;
         }
 
@@ -51,7 +51,7 @@ class ProductController extends Controller
 
             $this->ProductModel->update($id, $data);
 
-            header('Location: /LavaLust/LavaLust/products');
+            header('Location: ' . site_url('products'));
             exit;
         }
 
@@ -64,7 +64,7 @@ class ProductController extends Controller
 
         $this->ProductModel->delete($id);
 
-        header('Location: /LavaLust/LavaLust/products');
+        header('Location: ' . site_url('products'));
         exit;
     }
 }

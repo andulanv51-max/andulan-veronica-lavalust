@@ -124,11 +124,11 @@
 
         <div class="top-bar">
 
-            <a class="add-btn" href="/LavaLust/LavaLust/products/create">
+            <a class="add-btn" href="<?= site_url('products/create'); ?>">
                 + Add Product
             </a>
 
-            <a class="logout-btn" href="/LavaLust/LavaLust/logout">
+            <a class="logout-btn" href="<?= site_url('logout'); ?>">
                 Logout
             </a>
 
@@ -180,12 +180,12 @@
 
                         <td>
                             <a class="edit-btn"
-                               href="/LavaLust/LavaLust/products/edit/<?= $product['id']; ?>">
+                               href="<?= site_url('products/edit/' . $product['id']); ?>">
                                 Edit
                             </a>
 
                             <a class="delete-btn"
-                               href="/LavaLust/LavaLust/products/delete/<?= $product['id']; ?>">
+                               href="<?= site_url('products/delete/' . $product['id']); ?>">
                                 Delete
                             </a>
                         </td>

@@ -10,7 +10,7 @@ class AuthMiddleware
         $lava->call->library('session');
 
         if (!$lava->session->userdata('logged_in')) {
-            header('Location: /LavaLust/LavaLust/login');
+            header('Location: ' . site_url('login'));
             exit;
         }
 

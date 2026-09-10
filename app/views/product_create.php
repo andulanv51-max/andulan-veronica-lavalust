@@ -119,7 +119,7 @@
 
         </form>
 
-        <a class="back" href="/LavaLust/LavaLust/products">
+        <a class="back" href="<?= site_url('products'); ?>">
             ← Back to Products
         </a>
 
