@@ -6,6 +6,7 @@ class LoginController extends Controller
 {
     public function login()
     {
+        $this->call->helper('url');
         $this->call->library('session');
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -33,6 +34,7 @@ class LoginController extends Controller
 
     public function logout()
     {
+        $this->call->helper('url');
         $this->call->library('session');
 
         $this->session->unset_userdata([

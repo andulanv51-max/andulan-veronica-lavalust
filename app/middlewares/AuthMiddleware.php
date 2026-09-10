@@ -7,6 +7,8 @@ class AuthMiddleware
     public function handle($next)
     {
         $lava = lava_instance();
+
+        $lava->call->helper('url');
         $lava->call->library('session');
 
         if (!$lava->session->userdata('logged_in')) {

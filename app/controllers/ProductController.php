@@ -6,6 +6,7 @@ class ProductController extends Controller
 {
     public function index()
     {
+        $this->call->helper('url');
         $this->call->model('ProductModel');
 
         $products = $this->ProductModel->all();
@@ -15,6 +16,8 @@ class ProductController extends Controller
 
     public function create()
     {
+        $this->call->helper('url');
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $data = [
@@ -36,6 +39,7 @@ class ProductController extends Controller
 
     public function edit($id)
     {
+        $this->call->helper('url');
         $this->call->model('ProductModel');
 
         $product = $this->ProductModel->find($id);
@@ -60,6 +64,7 @@ class ProductController extends Controller
 
     public function delete($id)
     {
+        $this->call->helper('url');
         $this->call->model('ProductModel');
 
         $this->ProductModel->delete($id);
