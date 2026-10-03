@@ -76,5 +76,25 @@ $router->get('/login', 'LoginController::login');
 $router->post('/login', 'LoginController::login');
 $router->get('/logout', 'LoginController::logout');
 
+$router->get('create-migration/{migration_class}', 'MigrationController::create_migration');
+$router->get('migrate', 'MigrationController::migrate');
+$router->get('rollback', 'MigrationController::rollback');
+$router->get('rollback-all', 'MigrationController::rollback_all');
+$router->get('refresh', 'MigrationController::refresh');
+$router->get('status', 'MigrationController::status');
 
+$router->get('api/products', 'ProductApiController::index')
+       ->middleware('api_auth');
 
+$router->post('api/products', 'ProductApiController::create')
+       ->middleware('api_auth');
+
+$router->put('api/products/{id}', 'ProductApiController::update')
+       ->middleware('api_auth');
+
+$router->delete('api/products/{id}', 'ProductApiController::delete')
+       ->middleware('api_auth');
+
+$router->post('api/register', 'AuthApiController::register');
+
+$router->post('api/login', 'AuthApiController::login');

@@ -41,11 +41,11 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 | Used for adding middlewares
 |
 */
-require_once APP_DIR . 'middlewares/StudentMiddleware.php';
 require_once APP_DIR . 'middlewares/AuthMiddleware.php';
+require_once APP_DIR . 'middlewares/ApiAuthMiddleware.php';
 
 $config['middlewares'] = [
-    'student' => load_class('StudentMiddleware', 'middlewares'),
-    'auth' => load_class('AuthMiddleware', 'middlewares')
+    'auth' => load_class('AuthMiddleware', 'middlewares'),
+    'api_auth' => load_class('ApiAuthMiddleware', 'middlewares')
 ];
 
