@@ -1,5 +1,18 @@
 <?php
+
+// CORS
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization, Accept");
+
+// Handle CORS preflight request
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(204);
+    exit;
+}
+
 define('PREVENT_DIRECT_ACCESS', TRUE);
+
 /**
  * ------------------------------------------------------------------
  * LavaLust - an opensource lightweight PHP MVC Framework
@@ -45,7 +58,7 @@ define('PREVENT_DIRECT_ACCESS', TRUE);
  * 
  * NO TRAILING SLASH!
  */
-	$system_path 			= 'scheme';
+    $system_path = 'scheme';
 
 /*
  *---------------------------------------------------------------
@@ -57,7 +70,7 @@ define('PREVENT_DIRECT_ACCESS', TRUE);
  *
  * NO TRAILING SLASH!
  */
-	$application_folder 	= 'app';
+    $application_folder = 'app';
 
 /*
  *---------------------------------------------------------------
@@ -66,14 +79,14 @@ define('PREVENT_DIRECT_ACCESS', TRUE);
  * This let you set up your public folder where css, js and other public,
  * files will be visible
  */
-	$public_folder			= 'public';
+    $public_folder = 'public';
 
 /*
  * ------------------------------------------------------
  * Define Application Constants
  * ------------------------------------------------------
  */
-define('ROOT_DIR',  dirname(__DIR__) . DIRECTORY_SEPARATOR);
+define('ROOT_DIR', dirname(__DIR__) . DIRECTORY_SEPARATOR);
 define('SYSTEM_DIR', ROOT_DIR . $system_path . DIRECTORY_SEPARATOR);
 define('APP_DIR', ROOT_DIR . $application_folder . DIRECTORY_SEPARATOR);
 define('PUBLIC_DIR', $public_folder);
